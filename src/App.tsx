@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import Students from './pages/Students/Students';
+import Staff from './pages/Staff/Staff';
+import Spells from './pages/Spells/Spells';
+import Houses from './pages/Houses/Houses';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/students" element={<Students />} />
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/spells" element={<Spells />} />
+        <Route path="/houses" element={<Houses />} />
+      </Routes>
     </div>
   );
 }
