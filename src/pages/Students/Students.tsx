@@ -3,6 +3,7 @@ import { ICharacter } from '../../types/character';
 import { getStudents } from '../../services/apiService';
 import './Students.css';
 import CharacterCard from '../../components/CharacterCard/CharacterCard';
+import CharacterCardSkeleton from '../../components/CharacterCardSkeleton/CharacterCardSkeleton';
 
 const Students: React.FC = () => {
     const [students, setStudents] = useState<ICharacter[]>([]);
@@ -29,7 +30,13 @@ const Students: React.FC = () => {
         <div className="page-container">
             <h1 className="page-title">Hogwarts students</h1>
 
-            {isLoading && <div className="loading-message">Loading students...</div>}
+            {isLoading && (
+                <div className="card-list">
+                    {Array.from({ length: 8 }).map((_, index) => (
+                        <CharacterCardSkeleton key={index} />
+                    ))}
+                </div>
+            )}
 
             {error && <div className="error-message">{error}</div>}
 

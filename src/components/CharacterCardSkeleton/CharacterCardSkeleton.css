@@ -1,0 +1,68 @@
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+:root {
+    --skeleton-bg: #CBCBCB;
+}
+
+.skeleton-card {
+    background-color: #EAEBDB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-house-line {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--skeleton-bg);
+}
+
+.skeleton-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+}
+
+.skeleton-image {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var(--skeleton-bg);
+    border: 4px solid #EAEBDB;
+}
+
+.skeleton-content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.skeleton-name {
+    height: 1.2rem;
+    width: 60%;
+    margin: 1rem auto 1rem auto;
+    background-color: var(--skeleton-bg);
+    border-radius: 4px;
+}
+
+.skeleton-text {
+    height: 0.9rem;
+    width: 80%;
+    margin-bottom: 0.5rem;
+    background-color: var(--skeleton-bg);
+    border-radius: 4px;
+}
+
+.skeleton-text.short {
+    width: 50%;
+}
