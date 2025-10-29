@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  hogwarts-catalog-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+
+    image: hogwarts-catalog-frontend:latest
+
+    ports:
+      - "3000:80"
+
+    container_name: hogwarts-catalog
