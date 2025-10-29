@@ -1,0 +1,48 @@
+.character-card {
+    background-color: #EAEBDB;
+    color: #001F3F;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+}
+
+.card-image {
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid #eaebdb;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-name {
+    text-align: center;
+    margin: 0.75rem 0;
+    font-size: 1.2rem;
+}
+
+.card-details {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.card-details p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.house-line {
+    width: 100%;
+    height: 5rem;
+}
