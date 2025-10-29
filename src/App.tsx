@@ -21,6 +21,7 @@ const App: React.FC = () => {
       <main className={isHomePage ? 'main-content-home' : 'main-content-default'}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/students/house/:houseName" element={<Students />} />
           <Route path="/students" element={<Students />} />
           <Route path="/staff" element={<Staff />} />
           <Route path="/spells" element={<Spells />} />

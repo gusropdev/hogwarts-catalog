@@ -1,0 +1,29 @@
+.house-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    min-height: 15rem;
+}
+
+.house-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.house-logo {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.house-name {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
