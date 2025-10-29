@@ -1,46 +1,63 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hogwarts Catalog
+Este projeto é uma aplicação frontend responsiva desenvolvida como um desafio técnico para um processo seletivo de estágio. O objetivo é criar um catálogo interativo do universo Harry Potter, consumindo dados da [HP API](https://hp-api.onrender.com).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Demonstração
 
-### `npm start`
+![GIF Hogwarts Catalog](https://i.imgur.com/6Mn8EvF.gif)
+## 🚀 Funcionalidades
+- **Navegação por 5 Páginas**: Home, Alunos, Funcionários, Feitiços e Casas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Catálogos Dinâmicos**: As páginas de Alunos, Funcionários e Feitiços consomem dados da API em tempo real.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Carregamento Otimizado** (UI/UX): Esqueletos de carregamento (Skeletons) são exibidos enquanto os dados da API são buscados.
 
-### `npm test`
+- **Filtro por Casas**: A página de Casas permite ao usuário clicar em uma casa e ver uma lista filtrada de alunos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Design Responsivo**: A grade de cards se adapta de 4 para 3, 2 ou 1 coluna, dependendo do tamanho da tela.
 
-### `npm run build`
+- **Containerizado**: A aplicação é totalmente gerenciada com Docker e Docker Compose.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tecnologias
+O desafio exigia o uso de tecnologias específicas, com foco em um ecossistema moderno de frontend:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React com TypeScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Roteamento**: React Router
 
-### `npm run eject`
+- **Requisições HTTP**: Axios
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Estilização**: CSS (CSS puro com Flexbox, Grid e Media Queries)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Infraestrutura**: Docker e Docker Compose
+## ⚙️ Como Executar Localmente
+Este projeto é configurado para ser executado com Docker, como exigido pelo desafio.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Pré-requisitos
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e em execução.
+- [Git](https://git-scm.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Passos para Execução
+#### 1. Clone o repositorio
+```Bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+#### 2. Crie o arquivo de ambiente
+Crie um arquivo chamado .env na raiz do projeto e adicione a seguinte variável (ela é lida pelo docker-compose.yml):
 
-## Learn More
+```Snippet de código
+REACT_APP_API_BASE_URL=https://hp-api.onrender.com/api
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 3. Suba o contêiner:
+Use o Docker Compose para construir a imagem e iniciar o contêiner.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```Bash
+docker-compose up --build
+```
+
+#### 4. Acesse a aplicação:
+Abra seu navegador e acesse http://localhost:3000.
+    
