@@ -4,6 +4,12 @@
     align-items: center;
     padding: 1rem 4rem;
     background-color: #001F3F;
+
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    box-sizing: border-box;
 }
 
 .navbar-left .navbar-icon {
@@ -30,4 +36,8 @@
 .navbar-icon {
     width: 2.5rem;
     height: auto;
+}
+
+.navbar.navbar-home {
+    background-color: #001F3F40;
 }

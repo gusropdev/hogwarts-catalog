@@ -1,0 +1,35 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://i.redd.it/578pix1joiuc1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    padding-left: 5rem;
+    max-width: 50rem;
+}
+
+.explore-button {
+    background-color: #E6B83C;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    border: none;
+    font-family: inherit;
+}
+
+.explore-button:active {
+    background-color: #E6B83CE0;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
