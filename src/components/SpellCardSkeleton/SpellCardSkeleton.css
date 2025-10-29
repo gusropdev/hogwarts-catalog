@@ -1,0 +1,26 @@
+.spell-skeleton-card {
+    min-height: 18rem;
+}
+
+.spell-skeleton-line {
+    height: 4rem;
+}
+
+.spell-skeleton-image-container {
+    margin-top: -2.5rem;
+}
+
+
+.spell-skeleton-image-container .skeleton-image {
+    width: 5rem;
+    height: 5rem;
+}
+
+.spell-skeleton-card .skeleton-name {
+    margin-top: 2rem;
+}
+
+.spell-skeleton-card .skeleton-text {
+    margin-left: auto;
+    margin-right: auto;
+}

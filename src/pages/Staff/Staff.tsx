@@ -11,18 +11,18 @@ const Staff: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchStudents = async () => {
+        const fetchStaff = async () => {
             try {
                 const data = await getStaff();
                 setStaff(data);
             } catch (error) {
-                setError('Failed to fetch students');
+                setError('Failed to fetch staff');
                 console.error(error);
             } finally {
                 setIsLoading(false);
             }
         };
-        fetchStudents();
+        fetchStaff();
     }, []);
 
     return (
