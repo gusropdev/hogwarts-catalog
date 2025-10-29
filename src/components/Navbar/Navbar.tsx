@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className={isHomePage ? 'navbar navbar-home' : 'navbar'}>
             <div className="navbar-left">
-                <img src={HogwartsIcon} alt="Hogwarts Icon" className="navbar-icon" />
+                <NavLink to="/"> <img src={HogwartsIcon} alt="Hogwarts Icon" className="navbar-icon" /></NavLink>
             </div>
             <div className="navbar-right">
                 <NavLink to="/" className="nav-link">home</NavLink>
