@@ -4,7 +4,7 @@ import { ISpell } from '../types/spells';
 
 const apiClient = axios.create(
     {
-        baseURL: 'https://hp-api.onrender.com/api'
+        baseURL: process.env.REACT_APP_API_BASE_URL
     }
 );
 
